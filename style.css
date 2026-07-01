@@ -1,0 +1,106 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline;
+    /* приводим все к одной базовой линии */
+    background: transparent;
+    /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%;
+    /* размер шрифта всем одинаковый */
+}
+
+.title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    background-color: #9e9b9b;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main-content {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.content-container{
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.profile-photo {
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 5%;
+}
+.section-title {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
+.info-block {
+    font-size: 1.9em;
+    margin-bottom: 10px;
+}
+.info-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
