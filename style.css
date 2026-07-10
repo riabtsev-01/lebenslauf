@@ -1,106 +1,170 @@
-html,
-body,
-div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-em,
-img,
-strong,
-sub,
-sup,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-table,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    /* обнуляем отступы и убираем бордюры */
-    vertical-align: baseline;
-    /* приводим все к одной базовой линии */
-    background: transparent;
-    /* чтобы не проскакивали левые фоны, установленные по умолчанию */
-    font-size: 100%;
-    /* размер шрифта всем одинаковый */
+/* Basic settings */
+
+* {
+    box-sizing: border-box;
 }
 
-.title {
-    text-align: center;
-    font-size: 3em;
-    margin-bottom: 20px;
-    background-color: #9e9b9b;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background: #eef1f5;
+    color: #222;
+    line-height: 1.5;
 }
 
 .cv-container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #ffffff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
 }
+
+
+/* Header */
+
+.header {
+    background-color: #013294;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.title {
+    font-size: 3em;
+    margin: 0 0 15px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+
+/* Main layout */
+
 .main-content {
     display: flex;
-    margin-top: 20px;
-    gap: 20px;
+    gap: 30px;
+    padding: 30px;
 }
-.content-container{
-    font-size: 1.5em;
+
+
+/* Left side */
+
+.sidebar {
+    width: 35%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 25px;
 }
-.profile-photo {
-    flex: 0 0 auto;
-    overflow: hidden;
-    border-radius: 5%;
+
+
+.profile-img {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
-.section-title {
-    font-size: 2.4em;
+
+
+.profile,
+.personal-info {
+    background: #f7f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+.profile h2,
+.personal-info h2,
+.content h2 {
+    color: #013294;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #013294;
+    padding-bottom: 5px;
+}
+
+
+.profile p,
+.personal-info p {
+    font-size: 1em;
     margin-bottom: 10px;
 }
-.info-block {
-    font-size: 1.9em;
-    margin-bottom: 10px;
+
+
+/* Right side */
+
+.content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
-.info-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    text-align: center;
+
+
+.work-experience,
+.education,
+.additional-training,
+.skills {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+.job {
+    margin-bottom: 20px;
+}
+
+
+.job p {
+    margin-bottom: 5px;
+}
+
+
+ul {
+    padding-left: 20px;
+}
+
+
+li {
+    margin-bottom: 5px;
+}
+
+
+a {
+    color: #013294;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile version */
+
+@media (max-width: 800px) {
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .content {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2.2em;
+    }
 }
